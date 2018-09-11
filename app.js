@@ -27,5 +27,10 @@ var fs = require('fs');
 // }
 
 // fs.readFile("./challenge4")
-fs.writeFileSync('challenge4/copyfolder')
-fs.createReadStream('challenge4/info.txt').pipe(fs.createWriteStream('challenge4/copyfolder'));
+// fs.writeFileSync('challenge4/copyfolder')
+// fs.createReadStream('challenge4/info.txt').pipe(fs.createWriteStream('challenge4/copyfolder'));
+
+fs.readFileSync("challenge5/info.txt","utf8")
+var str = "My-Name-is-troy";
+str = str.replace(/-/g, ' ');
+console.log(str);
