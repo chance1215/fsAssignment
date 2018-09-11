@@ -19,10 +19,9 @@ var fs = require('fs');
  // console.log(text)
 
 
+try{
+  fs.renameSync('challenge3/binfo.txt', './info.txt');
+}catch(err){
+  console.log("Error while renaming file");
 
- fs.rename("challenge3/binfo.txt","utf8",(err,data) =>{
-  if(err){
-    throw err;
-  }
-  console.log(data)
-})
+}
