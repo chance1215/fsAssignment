@@ -19,9 +19,13 @@ var fs = require('fs');
  // console.log(text)
 
 
-try{
-  fs.renameSync('challenge3/binfo.txt', './info.txt');
-}catch(err){
-  console.log("Error while renaming file");
+// try{
+//   fs.renameSync('challenge3/binfo.txt', './info.txt');
+// }catch(err){
+//   console.log("Error while renaming file");
+//
+// }
 
-}
+// fs.readFile("./challenge4")
+fs.writeFileSync('challenge4/copyfolder')
+fs.createReadStream('challenge4/info.txt').pipe(fs.createWriteStream('challenge4/copyfolder'));
